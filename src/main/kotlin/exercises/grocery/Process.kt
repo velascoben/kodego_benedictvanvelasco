@@ -1,4 +1,9 @@
 package exercises.grocery
 
-class Process {
+abstract class Process {
+
+    abstract fun listFruits()
+    abstract fun listCereals()
+    abstract fun listBeverages()
+
 }

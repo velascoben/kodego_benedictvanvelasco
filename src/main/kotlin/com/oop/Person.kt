@@ -2,28 +2,12 @@ package com.oop
 
 open class Person {
 
+    var name : String = ""
+    var age : Int = 0
+
     // Abstraction
     // Encapsulation
 
-    var name : String = "John"
-        get() {
-            return field
-        }
-        set(value) {
-            field = value
-        }
-    var age : Int = 23
-        get() {
-            return field
-        }
-        set(value) {
-            if(value < 1) {
-                println("Invalid Age!")
-            } else {
-                field = value
-            }
-
-        }
     init {
         println("Object Created!")
         println("Name is $name, age is $age")
@@ -34,11 +18,19 @@ open class Person {
         return age
     }
 
-    fun changeAge(age : Int) {
-        println(age)
+    open fun displayName(){
+        println("Name is $name")
     }
 
-    open fun displayName() { // Polymorphism
-        println("The name is $name")
+    fun displayName(name : String) {
+        println("Name is $name")
+    }
+
+    open fun displayName(numberOfTimes : Int) { // Polymorphism
+        var ctr = numberOfTimes - 1
+        while (ctr >= 0) {
+            println("The name is $name")
+            ctr++
+        }
     }
 }

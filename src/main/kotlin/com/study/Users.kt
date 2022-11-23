@@ -1,4 +1,4 @@
-package exercises.grocery
+package com.study
 
 open class Users {
 
@@ -24,7 +24,9 @@ open class Users {
 
     var result : Boolean = false
 
-    var usersList = mutableMapOf<String,String>("ben" to "benPass", "aziza" to "AzizaPass", "eugene" to "EugenePass" )
+    var usersList = mutableMapOf<String, String>("ben" to "benPass", "aziza" to "AzizaPass", "eugene" to "eugenePass", "francis" to "francisPass", "arnel" to "arnelPass", "pau" to "pauPass", "neil" to "neilPass" )
+
+    var userType = mutableMapOf<String, String>("admin" to "ben","coordinator" to "aziza","dean" to "eugene","full_teacher" to "francis","part_teacher" to "arnel","student" to "pau", "student" to "neil")
 
 }
 
